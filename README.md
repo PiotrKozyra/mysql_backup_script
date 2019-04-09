@@ -83,7 +83,12 @@ ex.
 
 > username=sqluser784 password=GaL6JhU62S host= sql.freemysqlhosting.net
 
-#### Example
+#### Examples
 ```
-./mysql_backup.sh -u sqluser784 -p GaL6JhU62S  -h sql.freemysqlhosting.net -d sql673 -f "/home/user/Desktop" -r "/home/user/Desktop/pfile.txt"
+./mysql_backup.sh -u sqluser784 -p GaL6JhU62S  -h sql.freemysqlhosting.net -d sql673 -f "/home/user/Desktop"
+```
+Running with parameters from file:
+
+```
+./mysql_backup.sh -r "/etc/mysql/.my.cnf"
 ```
