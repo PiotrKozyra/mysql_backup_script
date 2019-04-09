@@ -60,6 +60,7 @@ Mandatory arguments:
 
 Runs a script with given options. Connects to server and performs a data dump of all databases or one selected database(if specified). Creates dump and log files in given location:
 > "file_path/database_name.dump[current_date_and_time].gz"
+
 > "file_path/database_name.log"
 
 Optional arguments:
