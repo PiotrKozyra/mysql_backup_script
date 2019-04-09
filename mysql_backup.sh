@@ -56,18 +56,18 @@ log (){
 
 	SELECT table_name AS 'Table', round(((data_length + index_length) / 1024 / 1024), 3) 'Size in MB', table_type, engine, table_rows, avg_row_length, create_time, update_time
 	FROM information_schema.TABLES 
-	WHERE table_schema='$1' AND table_name!='checksumTable';
+	WHERE table_schema='$1';
 
 	SELECT char(13) AS '';
 
-    select GROUP_CONCAT(table_name SEPARATOR ', ') into @nazwy_tabel FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='$1';
+   	select GROUP_CONCAT(table_name SEPARATOR ', ') into @table_names FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='$1';
 
-    SET @tw = CONCAT('checksum table ', @nazwy_tabel); 
+    	SET @tw = CONCAT('checksum table ', @table_names); 
             PREPARE stmt1 FROM @tw; 
             EXECUTE stmt1; 
             DEALLOCATE PREPARE stmt1; 
 
-    SELECT char(13) AS '';
+    	SELECT char(13) AS '';
 
 	SELECT count(*) as 'Count of tables' 
 	FROM information_schema.TABLES 
