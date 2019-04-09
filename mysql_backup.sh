@@ -18,17 +18,19 @@
 usage() { echo "Usage: $(basename $0) -u <USERNAME> -p <PASSWORD> -h <HOST> [-d DATABASE] [-f FILE PATH] [-r PARAMFILE]" >&2; exit 1; }
 
 
-while getopts :h:u:p:r:d:f: option 
+while getopts :h:u:p:r:d:f: option
 do
 	case "${option}" in
-		u) username=$OPTARG;;
-		p) password=$OPTARG;;
-		h) host_address=$OPTARG;;
-		r) username="$(grep user $OPTARG | cut -b 10-)"
-    	   password="$(grep password $OPTARG | cut -b 10-)"
-           host_address="$(grep host $OPTARG | cut -b 6-)";;
-		d) database=$OPTARG;;
-		f) file_path=$OPTARG;;
+		u) if [[ -z "$username" ]]; then username=$OPTARG; fi;;
+		p) if [[ -z "$password" ]]; then password=$OPTARG; fi;;
+		h) if [[ -z "$host_address" ]]; then host_address=$OPTARG; fi;;
+		d) if [[ -z "$database" ]]; then database=$OPTARG; fi;;
+		f) if [[ -z "$file_path" ]]; then file_path=$OPTARG; fi;;
+		r) if [[ -z "$username" ]]; then username="$(grep user $OPTARG | cut -b 10-)"; fi
+		   if [[ -z "$password" ]]; then password="$(grep password $OPTARG | cut -b 10-)"; fi
+		   if [[ -z "$host_address" ]]; then host_address="$(grep host $OPTARG | cut -b 6-)"; fi
+		   if [[ -z "$database" ]]; then database="$(grep database $OPTARG | cut -b 10-)"; fi
+		   if [[ -z "$file_path" ]]; then file_path="$(grep file_path $OPTARG | cut -b 11-)"; fi;;
 		\?) usage;; 		
 		:) echo "Option -$OPTARG requires an argument."; exit 1;; 		
 	esac
