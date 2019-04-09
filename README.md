@@ -95,8 +95,6 @@ ex.
 ```
 ./mysql_backup.sh -r "/etc/mysql/.my.cnf"
 ```
-_Warning_ 
-
+_WARNING_ 
 Do not use _-r_ flag with any mandatory flag (*-u, -p, -h*). Parameters from _.cnf_ file will override those provided with other flags. 
-
-_Warning_
+_WARNING_
