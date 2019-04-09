@@ -97,11 +97,11 @@ Optional arguments:
 ```
 _WARNING_ 
 Parameters from _file_name.cnf_ will override those provided with other flags. If you are using any mandatory flag  (*-u, -p, -h*), avoid inputting double parameters.
-#### ex.
+##### ex.
 Parameters in _my.cnf_:
 > username=sqluser784 password=GaL6JhU62S 
 
-Running script with host addres from _-h_ flag, username and password from config file:
+##### Running script with host addres from _-h_ flag, username and password from config file:
 ```
 ./mysql_backup.sh -h sql.freemysqlhosting.net -r "/etc/mysql/.my.cnf"
 ```
