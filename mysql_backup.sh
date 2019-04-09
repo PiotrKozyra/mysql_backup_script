@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Copyright (C) 2019 Kozyra Piotr, Kubiak Przemysław, Kurcab Jan
+# This file is part of mysql_backup_script.
+#
+# mysql_backup_script is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# mysql_backup_script is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+
 usage() { echo "Usage: $(basename $0) -u <USERNAME> -p <PASSWORD> -h <HOST> [-d DATABASE] [-f FILE PATH] [-r PARAMFILE]" >&2; exit 1; }
 
 
