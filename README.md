@@ -84,10 +84,13 @@ ex.
 > username=sqluser784 password=GaL6JhU62S host= sql.freemysqlhosting.net
 
 #### Examples
+
+##### Running script for one selected database, choosing location of dump and log files:
+
 ```
 ./mysql_backup.sh -u sqluser784 -p GaL6JhU62S  -h sql.freemysqlhosting.net -d sql673 -f "/home/user/Desktop"
 ```
-Running with parameters from file:
+##### Running with parameters from file (Recommended):
 
 ```
 ./mysql_backup.sh -r "/etc/mysql/.my.cnf"
