@@ -79,7 +79,7 @@ Optional arguments:
  
   *parameter_name*=value 
   
-ex.
+#### ex.
 
 > username=sqluser784 password=GaL6JhU62S host= sql.freemysqlhosting.net
 
@@ -96,5 +96,14 @@ ex.
 ./mysql_backup.sh -r "/etc/mysql/.my.cnf"
 ```
 _WARNING_ 
-Do not use _-r_ flag with any mandatory flag (*-u, -p, -h*). Parameters from _.cnf_ file will override those provided with other flags. 
+Parameters from _.cnf_ file will override those provided with other flags. If you are using any mandatory flag (*-u, -p, -h*), avoid inputting double parameters.
+#### ex.
+Parameters in _my.cnf_:
+> username=sqluser784 password=GaL6JhU62S 
+
+Running script with host addres from _-h_ flag, username and password from config file:
+```
+./mysql_backup.sh -h sql.freemysqlhosting.net -r "/etc/mysql/.my.cnf"
+```
+
 
