@@ -15,8 +15,7 @@
 #
 # You should have received a copy of the GNU General Public License
 
-usage() { echo "Usage: $(basename $0) -u <USERNAME> -p <PASSWORD> -h <HOST> [-d DATABASE] [-f FILE PATH] [-r PARAMFILE]" >&2; exit 1; }
-
+usage() { echo "Usage: $(basename $0) -u <USERNAME> -p <PASSWORD> -h <HOST> [-d DATABASE] [-f FILE PATH] [-r PARAMFILE]"; exit 1; }
 
 while getopts :h:u:p:r:d:f: option
 do
@@ -66,7 +65,7 @@ log (){
 		echo $FILE 'CREATED IN THE SPECIFIED LOCATION'
 	fi
     
-	mysql -u $username -p$password -h $host_address -D $1 -e "
+	mysql -u $username -p$password -h $host_address -B $1 -e "
 	SELECT NOW() AS 'Log Time';
 
 	SELECT char(13) AS '';
