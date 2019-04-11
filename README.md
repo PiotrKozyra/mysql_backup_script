@@ -100,7 +100,7 @@ Optional arguments:
 ./mysql_backup.sh -r "/etc/mysql/.my.cnf"
 ```
 _WARNING_ 
-Parameters from _file_name.cnf_ will override those provided with other flags. If you are using any mandatory flag  (*-u, -p, -h*), avoid inputting double parameters.
+Parameters provided with any of flags will override parameters from _file_name.cnf_. If you are using any mandatory flag  (*-u, -p, -h*), avoid doubling input of parameters.
 ##### ex.
 Parameters in _my.cnf_:
 > username=sqluser784 password=GaL6JhU62S 
