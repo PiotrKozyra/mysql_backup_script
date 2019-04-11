@@ -1,6 +1,10 @@
 # MySQL backup script
 ## Description
- Bash shell script that automates process of creating backup and log files of a local or remote MySQL server database
+ Bash shell script that automates process of creating backup and log files of a local or remote MySQL server database.
+ 
+ This project was made as part of our university course on Rzeszów University of Technology under the guidance of PhD Eng. Marek Bolanowski.
+ 
+ 
 ## Features
 Connecting to server, lisiting all databases, making dump and log files of all databases. 
 Making dump and log files of selected database. 
