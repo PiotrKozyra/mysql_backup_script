@@ -2,7 +2,7 @@
 ## Description
  Bash shell script that automates process of creating backup and log files of a local or remote MySQL server database.
  
- This project was made as part of our university course on Rzeszów University of Technology under the guidance of PhD Eng. Marek Bolanowski.
+ This project was made as part of the classes Designing systems and computer networks at the Rzeszów University of Technology.
  
  
 ## Features
