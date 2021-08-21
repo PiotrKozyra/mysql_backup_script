@@ -119,7 +119,7 @@ then
 
 		log $database
 
-		echo 'BACKUP COMPLEATED'
+		echo 'BACKUP COMPLETED'
 
 	done
 else
@@ -128,5 +128,5 @@ else
 
     log $database
 
- 	echo 'BACKUP COMPLEATED'
+ 	echo 'BACKUP COMPLETED'
 fi
